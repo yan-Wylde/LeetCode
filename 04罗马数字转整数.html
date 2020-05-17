@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var romanToInt = function (s) {
+    var I = 1, V = 5, X = 10, L = 50,
+        C = 100, D = 500, M = 1000;
+    var res = 0;
+    if (['IV', 'IX', 'XL', 'XC', 'CD', 'CM'].includes(s)) {
+      res = eval(s[1]) - eval(s[0])
+    }
+    else {
+      for (var i = 0; i < s.length; i++) {
+        res = res + eval(s[i])
+      }
+    }
+    return res
+  };
+  console.log(romanToInt("MCMXCIV"));
+</script>
+</body>
+</html>

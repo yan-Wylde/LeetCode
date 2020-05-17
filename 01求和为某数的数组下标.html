@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    //方法一：这道题的做法是：首先把每一个nums里面第i个需要对应的数值保存在res中，当后面nums[i]出现在res中，
+    // 则此时的i即满足条件。
+    // var twoSum = function(nums, target) {
+    //     let res = []
+    //     for(let i = 0; i < nums.length; i++) {
+    //         if(res[nums[i]] !== undefined)
+    //             return [res[nums[i]], i]
+    //         else
+    //             res[target - nums[i]] = i
+    //     }
+    // }
+
+
+    //方法二：自己的，写起来简单但是运行麻烦
+    var twoSum = function (nums, target) {
+      for (var i = 0; i < nums.length; i++) {
+        for (var j = 0; j < nums.length; j++) {
+          if (nums[i] + nums[j] == target) {
+            if (i == j) {
+            }
+            else {
+              return [i, j];
+              break;
+            }
+          }
+          else {
+          }
+        }
+      }
+    }
+    var tes = twoSum([1, 2, 3, 4, 5], 9);
+    alert(tes);
+  </script>
+</head>
+<body>
+
+</body>
+</html>

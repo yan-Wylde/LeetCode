@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  // 自己写的代码有问题
+  // var longestCommonPrefix = function(strs) {
+  //   length=strs.length
+  //   var com=''
+  //   var c=0
+  //     if (!strs[0]){
+  //     return ''
+  //     }
+  //     if(!strs[1]){
+  //     return strs[0]
+  //     }
+  //     for (var j=0;j<strs[0].length;j++){
+  //       for (var k=1;k<length;k++){
+  //         if (strs[0][j]===strs[k][j]){
+  //
+  //         }else{
+  //           break
+  //         }
+  //         if (k===length-1) {
+  //           c=j+1
+  //         }
+  //
+  //       }
+  //     }
+  //   for (var i=0;i<c;i++){
+  //     com=com+strs[0][i]
+  //   }
+  //   return com
+  // }
+
+  var longestCommonPrefix = function(strs) {
+    var re = '';
+    if (!strs.length) return re;
+    for (var j=0;j<strs[0].length;j++){//第j位
+      for (var i=1;i<strs.length;i++){//第i个
+        if (strs[i][j]!=strs[0][j]) return re
+      }
+      re += strs[0][j];
+    }
+    return re;
+  };
+</script>
+</body>
+</html>
